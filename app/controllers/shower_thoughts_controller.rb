@@ -1,0 +1,2 @@
+class ShowerThoughtsController < ApplicationController
+end
