@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
- get "/" => "showerthoughts#index"
- get "/showerthoughts" => "showerthoughts#index"
- get "/showerthoughts/new" => "showerthoughts#new"
- post "/showerthoughts" => "showerthoughts#create"
- get "/showerthoughts/:id" => "showerthoughts#show"
- get "/showerthoughts/:id/edit" => "showerthoughts#edit"
- patch "/showerthoughts/:id" => "showerthoughts#update"
- delete "/showerthoughts/:id" => "showerthoughts#destroy"
+ get "/" => "shower_thoughts#index"
+ get "/showerthoughts" => "shower_thoughts#index"
+ get "/showerthoughts/new" => "shower_thoughts#new"
+ post "/showerthoughts" => "shower_thoughts#create"
+ get "/showerthoughts/:id/edit" => "shower_thoughts#edit"
+ patch "/showerthoughts/:id" => "shower_thoughts#update"
 end

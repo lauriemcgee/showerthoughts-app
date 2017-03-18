@@ -1,7 +1,15 @@
 <h4>Laurie's r/showerthoughts</h4>
+<a href="/showerthoughts/new"> New r/laurie'sshowerthought </a>
 
+<div class="container">
     <% @shower_thoughts.each do |shower_thought| %>
+    <div class="shower_thought_id">
       <%= shower_thought.id %>
+    </div>
+    <div class ="shower_thought_caption">
       <%= shower_thought.caption %>
+    </div>
+    <a href="/showerthoughts/<%= shower_thought.id %>/edit"> Edit </a>
     <% end %>
+</div>
   

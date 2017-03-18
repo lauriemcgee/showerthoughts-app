@@ -1,0 +1,8 @@
+<h4>Edit </h4>
+  <%= form_tag "/showerthoughts/#{@shower_thought.id}", method: :patch do %>
+  <div class="form_group">
+    <%= label_tag :caption %>
+    <%= text_field_tag :caption, @shower_thought.caption, class: 'form_control' %>
+  </div>
+  <%= submit_tag "You really wanna edit your thoughts?", class: 'btn btn-primary' %>
+  <% end %>

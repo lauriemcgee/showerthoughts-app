@@ -1,0 +1,16 @@
+<section>
+  <div class="row">
+    <div class="col-sm-8-sm-offset-2">
+      <div class="new_shower_thought">
+        <h4> New </h4>
+        <%= form_tag '/showerthoughts', method: :post do %>
+          <div>
+            <%= label_tag :caption %>
+            <%= text_field_tag :caption, "", class: "form-control" %>
+          </div>
+        <%= submit_tag "Say it", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

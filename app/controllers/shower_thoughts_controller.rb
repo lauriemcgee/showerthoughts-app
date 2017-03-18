@@ -1,24 +1,28 @@
 class ShowerThoughtsController < ApplicationController
   def index
     @shower_thoughts = ShowerThought.all
-    return "index.html.erb"
+    render "index.html.erb"
   end
   def new
-    return "new.html.erb"
+    render "new.html.erb"
   end
   def create
-    redirect_to "index.html.erb"
-  end
-  def show
-    return "show.html.erb"
+    @shower_thought = ShowerThought.create(
+      caption: params[:caption]
+      )
+
+    redirect_to "/"
   end
   def edit
-    return "edit.html.erb"
+    shower_thought_id = params[:id]
+    @shower_thought = ShowerThought.find_by(id: shower_thought_id)
+    render "edit.html.erb"
   end 
   def update
-    redirect_to "index.html.erb"
-  end
-  def destroy
-    redirect_to "index.html.erb"
+    shower_thought_id = params[:id]
+    shower_thought = ShowerThought.find_by(id: shower_thought_id)
+    shower_thought.caption = params[:caption]
+    shower_thought.save
+    redirect_to "/"
   end
 end
