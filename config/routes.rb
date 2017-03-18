@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+ get "/" => "showerthoughts#index"
+ get "/showerthoughts" => "showerthoughts#index"
+ get "/showerthoughts/new" => "showerthoughts#new"
+ post "/showerthoughts" => "showerthoughts#create"
+ get "/showerthoughts/:id" => "showerthoughts#show"
+ get "/showerthoughts/:id/edit" => "showerthoughts#edit"
+ patch "/showerthoughts/:id" => "showerthoughts#update"
+ delete "/showerthoughts/:id" => "showerthoughts#destroy"
 end
